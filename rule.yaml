@@ -1,23 +1,7 @@
-proxies:
-  - {name: TW6-777, server: 2001:b030:246f:ff31:139e::1, port: 777, reality-opts: {public-key: QNEd23a_7ZfIRh5ZTnKfyQcVDqbcAT6LjYxs3siOFi8, short-id: 2c5875ac580312}, client-fingerprint: chrome, type: vless, uuid: 1ade7a10-6331-4b8b-9cf9-9c5695705090, tls: true, tfo: false, skip-cert-verify: false, servername: yahoo.com, network: tcp}
-  - {name: V6-hy, server: "[2001:b030:246f:ff31:139e::1]", port: 666, client-fingerprint: chrome, type: hysteria2, password: tianbao520, auth: tianbao520, sni: www.bing.com, skip-cert-verify: false}
-  - {name: V6-hy1, server: "[2001:b030:246f:ff31:139e:ddca:800:c46c]", port: 666, client-fingerprint: chrome, type: hysteria2, password: tianbao520, auth: tianbao520, sni: www.bing.com, skip-cert-verify: false}
-  - {name: V6-hy2, server: "[2001:b030:246f:ff31:139e:ba30:4318:9857]", port: 666, client-fingerprint: chrome, type: hysteria2, password: tianbao520, auth: tianbao520, sni: www.bing.com, skip-cert-verify: false}
-  - {name: V6-hy3, server: "[2001:b030:246f:ff31:139e:6296:99b5:816c]", port: 666, client-fingerprint: chrome, type: hysteria2, password: tianbao520, auth: tianbao520, sni: www.bing.com, skip-cert-verify: false}
-  - {name: V6-hy4, server: "[2001:b030:246f:ff31:139e:219e:63a0:89f4]", port: 666, client-fingerprint: chrome, type: hysteria2, password: tianbao520, auth: tianbao520, sni: www.bing.com, skip-cert-verify: false}
-  - {name: V6-hy5, server: "[2001:b030:246f:ff31:139e:7c7a:d8f6:d82e]", port: 666, client-fingerprint: chrome, type: hysteria2, password: tianbao520, auth: tianbao520, sni: www.bing.com, skip-cert-verify: false}
-  - {name: V6-hy6, server: "[2001:b030:246f:ff31:139e:11dc:a851:62c6]", port: 666, client-fingerprint: chrome, type: hysteria2, password: tianbao520, auth: tianbao520, sni: www.bing.com, skip-cert-verify: false}
-  - {name: V6-hy7, server: "[2001:b030:246f:ff31:139e:730a:c588:1bf7]", port: 666, client-fingerprint: chrome, type: hysteria2, password: tianbao520, auth: tianbao520, sni: www.bing.com, skip-cert-verify: false}
-  - {name: V6-hy8, server: "[2001:b030:246f:ff31:139e:a147:a22:a27f]", port: 666, client-fingerprint: chrome, type: hysteria2, password: tianbao520, auth: tianbao520, sni: www.bing.com, skip-cert-verify: false}
-  - {name: V6-hy9, server: "[2001:b030:246f:ff31:139e:bfe7:9f23:5425]", port: 666, client-fingerprint: chrome, type: hysteria2, password: tianbao520, auth: tianbao520, sni: www.bing.com, skip-cert-verify: false}
-  - {name: V6-hy10, server: "[2001:b030:246f:ff31:139e:b405:f026:9f86]", port: 666, client-fingerprint: chrome, type: hysteria2, password: tianbao520, auth: tianbao520, sni: www.bing.com, skip-cert-verify: false}
-  - {name: TW-hy, server: 103.186.187.230, port: 666, client-fingerprint: chrome, type: hysteria2, password: tianbao520, auth: tianbao520, sni: www.bing.com, skip-cert-verify: false}
-proxy-groups:
+  
+  ;1、域名组
 
-;1、域名组
-
-ruleset=IPV6,http://192.168.1.2:10800/IPv6.yaml
-
+ruleset=IPV6,http://czyd.mcfun.tv:10800/IPv6.list
 ruleset=AI,https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/AI.list
 ruleset=GitHub,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list
 ruleset=TikTok,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok.list
@@ -32,7 +16,7 @@ ruleset=国内,[]FINAL
 
 ;2、策略组（域名组-节点组）
 
-custom_proxy_group=IPV6`select`[]DIRECT`[]所有-自动`[]台湾-自动`[]香港-自动`[]日本-自动`[]新加坡-自动`[]美国-自动`[]其他`[]REJECT
+custom_proxy_group=IPV6`select`[]DIRECT`[]V6`[]REJECT
 custom_proxy_group=AI`select`[]DIRECT`[]所有-自动`[]台湾-自动`[]香港-自动`[]日本-自动`[]新加坡-自动`[]美国-自动`[]其他`[]REJECT
 custom_proxy_group=GitHub`select`[]DIRECT`[]所有-自动`[]台湾-自动`[]香港-自动`[]日本-自动`[]新加坡-自动`[]美国-自动`[]其他`[]REJECT
 custom_proxy_group=TikTok`select`[]DIRECT`[]所有-自动`[]台湾-自动`[]香港-自动`[]日本-自动`[]新加坡-自动`[]美国-自动`[]其他`[]REJECT
@@ -41,15 +25,18 @@ custom_proxy_group=流媒体`select`[]DIRECT`[]所有-自动`[]台湾-自动`[]�
 custom_proxy_group=国外`select`[]DIRECT`[]所有-自动`[]台湾-自动`[]香港-自动`[]日本-自动`[]新加坡-自动`[]美国-自动`[]其他`[]REJECT
 custom_proxy_group=国内`select`[]DIRECT`[]所有-自动`[]台湾-自动`[]香港-自动`[]日本-自动`[]新加坡-自动`[]美国-自动`[]其他`[]REJECT
 
+
 ;3、节点组
 
+custom_proxy_group=V6`url-test`(v6|V6)`http://www.google.com/generate_204`60,150
 custom_proxy_group=所有-自动`url-test`.*`http://www.gstatic.com/generate_204`60,150
 custom_proxy_group=台湾-自动`url-test`(台湾|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan)`http://www.gstatic.com/generate_204`60,150
 custom_proxy_group=香港-自动`url-test`(香港|HK|Hong Kong|🇭🇰|HongKong)`http://www.gstatic.com/generate_204`60,150
 custom_proxy_group=日本-自动`url-test`(日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)`http://www.gstatic.com/generate_204`60,150
 custom_proxy_group=新加坡-自动`url-test`(新加坡|SG|坡|狮城|🇸🇬|Singapore)`http://www.gstatic.com/generate_204`60,150
 custom_proxy_group=美国-自动`url-test`(美|加拿大|US|CA|纽约|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|🇺🇸|🇨🇦|Canada|United States)`http://www.gstatic.com/generate_204`60,150
-custom_proxy_group=其他`select`(^(?!.*(US|JP|HK|TW|SG|KR|)).*)
+custom_proxy_group=游戏`url-test`(遊戲|游戏)`http://www.gstatic.com/generate_204`60,150
+custom_proxy_group=其他`select`(^(?!.*(US|JP|HK|TW|SG)).*)
 
 #custom_proxy_group=韩国-自动`url-test`(韩国|KR|首尔|春川|🇰🇷|Korea)`http://www.gstatic.com/generate_204`60,150
 #custom_proxy_group=港台日新韩-自动`url-test`(香港|HK|Hong Kong|🇭🇰|HongKong|台湾|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|新加坡|SG|坡|狮城|🇸🇬|Singapore|韩国|KR|首尔|春川|🇰🇷|Korea)`http://www.gstatic.com/generate_204`60,150
